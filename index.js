@@ -21,9 +21,9 @@ client.connect(err => {
   const collection = client.db(`bookshop`).collection(`book`);
   console.log('Database connected');
   // root get
-  app.get('/', (req, res) => {
-    res.send('Hello from db it is not  working');
-  })
+  // app.get('/', (req, res) => {
+  //   res.send('Hello from db it is not  working');
+  // })
 
   // fake data send to database
   app.post('/addBook', (req, res) => {
