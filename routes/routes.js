@@ -1,6 +1,11 @@
+const bookRoute = require("./bookRoute");
 const rootRoute = require("./rootRoute");
 
 const routes = [
+    {
+        path: '/book',
+        handler: bookRoute
+    },
     {
         path: '/',
         handler: rootRoute
