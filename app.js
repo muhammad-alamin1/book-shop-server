@@ -1,6 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
+const path = require('path');
 
 // import routes & middleware
 const { applicationMiddleware } = require('./middleware/appMiddleware');
@@ -8,6 +9,9 @@ const allRoutes = require('./routes/routes');
 
 // app
 const app = express();
+
+// Static Middleware 
+app.use(express.static(path.join(__dirname, 'public')))
 
 // use middleware
 app.use(applicationMiddleware);
